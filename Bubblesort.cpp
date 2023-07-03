@@ -2,7 +2,6 @@
 
 using namespace std;
 
-void swap();
 int main()
 {
     int a[100],n,temp;
@@ -30,9 +29,4 @@ int main()
     {
         cout<<a[i]<<'\n';
     }
-}
-
-void swap()
-{
-
 }
