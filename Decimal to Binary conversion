@@ -1,0 +1,24 @@
+//Program to convert decimal to binary value//
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main()
+{
+    int a,b[100],i;
+    cout<<"Enter the decimal number to convert";
+    cin>>a;
+    
+    
+    while(a!=0)
+    {
+        b[i]=a%2;
+        a=a/2;
+        i++; 
+    }
+    for (int j = i - 1; j >= 0; j--) 
+        cout << b[j];
+    return 0;
+}
