@@ -1,0 +1,80 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+int temp, i = 0, j, bin[100];
+void binary(int n);
+void Hex(int m);
+
+int main()
+{
+	int num;
+
+	cout << "Enter the number to convert Binary and Hex= ";
+	cin >> num;
+	temp = num;
+	binary(temp);
+	cout << '\n'<<'\n';
+	temp = num;
+	Hex(temp);
+	return 0;
+}
+
+
+void binary(int n)
+{
+	while (temp != 0)
+	{
+		bin[i] = temp % 2;
+		temp = temp / 2;
+		i++;
+	}
+
+	cout << "The Binary number = ";
+	for (j = i - 1; j >= 0; j--)
+	{
+		cout << bin[j];
+	}
+	return;
+}
+
+void Hex(int m)
+{
+	cout << "The Hexadecimal number = ";
+	i = 0;
+	while (temp != 0)
+	{
+		bin[i] = temp % 16;
+		temp /= 16;
+		i++;
+	}
+	for (j = i - 1; j >= 0; j--)
+	{
+		if (bin[j] > 9)
+		{
+			switch (bin[j])
+			{
+			case 10: bin[j] = 'A';
+				break;
+			case 11: bin[j] = 'B';
+				break;
+			case 12: bin[j] = 'C';
+				break;
+			case 13: bin[j] = 'D';
+				break;
+			case 14: bin[j] = 'E';
+				break;
+			case 15: bin[j] = 'F';
+				break;
+			default:
+				break;
+			}
+			cout << char(bin[j]);
+		}
+		else
+		{
+			cout << (bin[j]);
+		}
+	}
+	return;
+}
