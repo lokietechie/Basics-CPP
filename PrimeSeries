@@ -1,0 +1,36 @@
+//Write a prgm to print prime no.//
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int num,i,flag=0,j;
+	cout << "Enter the number to list the prime numbers =";
+	cin >> num;
+
+	
+	for (j = 1; j <= num; j++)
+	{
+		if (j == 1)
+		{
+			flag = 0;
+		}
+		flag = 0;
+		for (i = 2; i < j; i++)
+		{
+			if (j % i == 0)  //Check for Prime or not//
+			{
+				flag = 1;
+				break;
+			}	
+		}
+		if (flag == 0)
+		{
+			cout << j << '\t';
+		}		
+	}
+
+	
+}
